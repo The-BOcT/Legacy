@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body, html{
+  background-color: black;
+}
+
+/*header*/
+.heading{
+  margin: 10px auto;
+  border-bottom: 2px solid white;
+  width: 45%;
+  min-width: 310px;
+  padding: 5px 5px 10px;
+}
+/*title*/
+.heading h1{
+  margin: 0;
+  color: white;
+  font-family: 'Megrim', monospace;
+  text-align: center;
+  font-size: 40px;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
+  animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+/*content-div-bot (or) head of the bot -----------------------------------------*/
+.bot-head{
+  margin: 10px auto 575px;
+  width: 20%;
+  min-width: 310px;
+  padding: 5px;
+  height: 80px;
+  text-align: center;
+  -webkit-animation: flicker-in-1 2.3s linear 2.7s forwards;
+	 animation: flicker-in-1 2.3s linear 2.7s forwards;
+}
+@-webkit-keyframes flicker-in-1 {
+  0% {opacity: 0;}
+  10% {opacity: 0;} 10.1% {opacity: 1;} 10.2% {opacity: 0;}
+  20% {opacity: 0;} 20.1% {opacity: 1;} 20.6% {opacity: 0;}
+  30% {opacity: 0;} 30.1% {opacity: 1;} 30.5% {opacity: 1;} 30.6% {opacity: 0;}
+  45% {opacity: 0;} 45.1% {opacity: 1;}
+  50% {opacity: 1;}
+  55% {opacity: 1;} 55.1% {opacity: 0;}
+  57% {opacity: 0;} 57.1% {opacity: 1;}
+  60% {opacity: 1;} 60.1% {opacity: 0;}
+  65% {opacity: 0;} 65.1% {opacity: 1;}
+  75% {opacity: 1;} 75.1% {opacity: 0;}
+  77% {opacity: 0;} 77.1% {opacity: 1;}
+  85% {opacity: 1;} 85.1% {opacity: 0;}
+  86% {opacity: 0;} 86.1% {opacity: 1;} 86.2% {opacity: 0;} 86.3% {opacity: 1;}
+  99% {opacity: 1;} 99.1% {opacity: 0;} 99.2% {opacity: 1;}
+  100% {opacity: 1;}
+}
+@keyframes flicker-in-1 {
+  0% {opacity: 0;}
+  10% {opacity: 0;} 10.1% {opacity: 1;} 10.2% {opacity: 0;}
+  20% {opacity: 0;} 20.1% {opacity: 1;} 20.6% {opacity: 0;}
+  30% {opacity: 0;} 30.1% {opacity: 1;} 30.5% {opacity: 1;} 30.6% {opacity: 0;}
+  45% {opacity: 0;} 45.1% {opacity: 1;}
+  50% {opacity: 1;}
+  55% {opacity: 1;} 55.1% {opacity: 0;}
+  57% {opacity: 0;} 57.1% {opacity: 1;}
+  60% {opacity: 1;} 60.1% {opacity: 0;}
+  65% {opacity: 0;} 65.1% {opacity: 1;}
+  75% {opacity: 1;} 75.1% {opacity: 0;}
+  77% {opacity: 0;} 77.1% {opacity: 1;}
+  85% {opacity: 1;} 85.1% {opacity: 0;}
+  86% {opacity: 0;} 86.1% {opacity: 1;} 86.2% {opacity: 0;} 86.3% {opacity: 1;}
+  99% {opacity: 1;} 99.1% {opacity: 0;} 99.2% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+/*BOcT*/
+.bot-btn > svg{
+  height: 70px;
+  width: 70px;
+  fill: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.bot-btn > svg:hover{
+  fill: #ff1439;
+}
+
+
+/*chatter ----------------------------------------------------------------------*/
+.arrow_box {
+	position: relative;
+  margin: 0 auto 58px;
+  border-radius: 36px 0 36px 36px;
+  width: 65%;
+  height: 485px;
+  padding: 6px;
+  background-color: hsl(0,0%,90%);
+  transition: all 0.2s linear;
+  display: none;
+  -webkit-animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-top {
+  0% {-webkit-transform: scale(0);
+            transform: scale(0);
+      -webkit-transform-origin: 50% -8%;
+            transform-origin: 50% -8%;
+  }
+  100% {-webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: 50% -8%;
+            transform-origin: 50% -8%;
+  }
+}
+@keyframes scale-in-top {
+  0% {-webkit-transform: scale(0);
+            transform: scale(0);
+      -webkit-transform-origin: 50% -8%;
+            transform-origin: 50% -8%;
+  }
+  100% {-webkit-transform: scale(1);
+            transform: scale(1);
+       -webkit-transform-origin: 50% -8%;
+            transform-origin: 50% -8%;
+  }
+}
+
+.arrow_box:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: hsl(0,0%,90%);
+	border-width: 27px;
+	margin-left: -27px;
+}
+
+
+/*chatspace------------------------------------*/
+.talk_box{
+  width: 100%;
+  height: 423px;
+  border-radius: 32px 0 0 0;
+  background-color: black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#chatspace::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+	background-color: #F5F5F5;
+}
+
+#chatspace::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+  cursor: pointer;
+}
+
+#chatspace::-webkit-scrollbar-thumb
+{
+	background-color: #5c5c5c;
+}
+
+
+/*message CSS-------------------------------------------------------------------*/
+/* BOcT talk CSS */
+.boct_talk{
+  float: left;
+  width: 75%;
+  margin: 6px 4px 6px 10px;
+  border: 2px solid #ffffff;
+  padding: 2px 8px 2px 8px;
+  position: relative;
+  background: #e64c63;
+}
+
+.boct_talk:after, .boct_talk:before {
+	right: 100%;
+	top: 25%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.boct_talk:after {
+	border-color: rgba(226, 50, 76, 0);
+	border-right-color: #e64c63;
+	border-width: 8px;
+	margin-top: -8px;
+}
+.boct_talk:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 11px;
+	margin-top: -11px;
+}
+
+/*human talk CSS */
+.human_talk{
+  float: right;
+  width: 75%;
+  min-height: 36px;
+  margin: 6px 10px 6px 4px;
+  background: white;
+  padding: 2px 8px 2px 8px;
+  position: relative;
+}
+.human_talk:after {
+  left: 100%;
+  top: 75%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+  border-left-color: #ffffff;
+  border-width: 8px;
+  margin-top: -8px;
+}
+
+.human_talk > p , .boct_talk > p{
+  color: black;
+  font-size: 14px;
+  font-family: "Quicksand", "Arial", sans-serif;
+  overflow-wrap: break-word;
+}
+
+
+/*Type--------------------------------------------------------------------------*/
+.type_box{
+  margin: 12px auto;
+  width: 88%;
+  height: 36px;
+}
+
+.type_box-inner {
+  width: 100%;
+  display: flex;
+}
+
+.typespace {
+  width: 100%;
+  padding: 5px;
+  height: 20px;
+  border: 3px solid black; /*#00B4CC;*/
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 0 15px black;
+  outline: none;
+  color: hsl(0,0%,35%);
+  font-family: "Quicksand", sans-serif;
+}
+
+.typespace:focus{
+  color: black;
+}
+
+.typespace-enter {
+  width: 40px;
+  height: 36px;
+  padding: 8px;
+  background: black;
+  box-shadow: 0 0 15px black;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  align-items: center;
+}
+.typespace-enter > svg{
+  fill: white;
+  width: 17px;
+  height: 17px;
+  margin: auto;
+  text-align: center;
+  transition: all 0.1s linear;
+}
+.typespace-enter > svg:active{
+  fill: #ff1439;
+}
+
+
+/* FOOTER ----------------------------------------------------------------------*/
+footer{
+  border-top: 3px solid white;
+  padding: 20px 10px 0;
+  height: 40px;
+  min-width: 300px;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+footer > div{
+   width: 46%;
+   float: left;
+   margin: auto 2%;
+}
+footer > div > a {
+   color: white;
+   outline: none;
+   text-decoration: none;
+   font-family: 'Overpass', sans-serif;
+   font-size: 12px;
+}
+footer > div > a:hover, footer > div > a:focus{
+  color: #ff1439;
+}
+
+
+/*media queries---------------------------------------------------------------*/
+@media screen and (max-width: 880px) and (min-width: 485px) {
+  .arrow_box{
+    width: 96%;
+    min-width: 300px;
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading h1{
+    font-size: 26px;
+    animation: none;
+    -webkit-animation: none;
+  }
+  .bot-head{
+    height: 60px;
+    animation: none;
+    -webkit-animation: none;
+  }
+  .bot-btn > svg{
+    width: 55px;
+    height: 55px;
+  }
+  .arrow_box{
+    height: 550px;
+    width: 96%;
+    min-width: 300px;
+    animation: none;
+    -webkit-animation: none;
+  }
+  .talk_box{
+    height: 488px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .type_box{
+    width: 96%;
+  }
+}
+
+/*
+*-----------------------------------------------------------
+* Animations: scale-in-top, flicker-in-1 and focus-in-expand.
+* generated by animista.net
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info.
+* w: http://animista.net, t: @cssanimista
+*-----------------------------------------------------------
+And also:
+------ Thanks to ------------
+->  https://redstapler.co/add-loading-animation-to-website/
+---------------
+*/
+
+.loader-wrapper {
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding: 10px;
+  display:flex;
+}
+
+.loader{
+  width: 150px;
+  height: 18px;
+  background-color: black;
+  border: 2px solid white;
+  box-shadow: 0 0 100px white;
+  padding: 3px;
+  margin: auto;
+}
+
+.load_bar{
+  width: 100%;
+  height: 18px;
+  background-color: white;
+  animation: load 2.5s linear;
+}
+@keyframes load{
+  0% {width: 0%;}
+  35% {width: 21%;}
+  65% {width: 70%;}
+  100% {width: 100%;}
+}

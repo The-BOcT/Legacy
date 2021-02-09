@@ -1,0 +1,74 @@
+body, html{
+  background-color: black;
+}
+
+.heading{
+  border-bottom: 2px solid white;
+  margin: 5px auto 10px;
+  width: 45%;
+  min-width: 290px;
+}
+.heading h1{
+  color: white;
+  font-family: monospace;
+  font-size: 36px;
+  text-align: center;
+}
+
+
+.bot-head{
+  width: 90px;
+  height: 90px;
+  margin: 50px auto 480px;
+  padding: 5px;
+  text-align: center;
+}
+.bot-head:hover{
+  animation: shake 0.8s linear infinite
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px); }
+  10% { transform: translate(-1px, -2px); }
+  20% { transform: translate(-3px, 0px); }
+  30% { transform: translate(3px, 2px); }
+  40% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 2px); }
+  60% { transform: translate(-3px, 1px); }
+  70% { transform: translate(3px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  90% { transform: translate(1px, 2px); }
+  100% { transform: translate(1px, -2px); }
+}
+
+
+.bot-btn{
+  font-size: 69px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.bot-btn:hover{
+  color: #ff1439;
+}
+
+footer{
+  border-top: 2px solid white;
+  padding: 10px 10px 0;
+  height: 40px;
+  min-width: 290px;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+footer > div{
+   width: 46%;
+   float: left;
+   margin: auto 2%;
+}
+footer > div > a{
+   color: white;
+   text-decoration: none;
+   font-family: monospace;
+   font-size: 12px;
+}
+footer > div > a:hover{
+  color: #ff1439;
+}

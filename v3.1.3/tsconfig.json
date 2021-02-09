@@ -1,0 +1,10 @@
+{
+  "include": ["src/*"],
+  "compilerOptions": {
+    "removeComments": true,
+    "strictNullChecks": false,
+    "lib": ["ES7","DOM"],
+    "outDir": "dist",
+    "importHelpers": true
+  }
+}
